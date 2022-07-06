@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+</head>
+<style>
+    .custom-checkbox span {
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid #0c0c0c;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 10px;
+    }
+
+    .custom-checkbox input[type="checkbox"] {
+        display: none;
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked+span {
+
+        position: relative;
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked+span:after {
+        content: "";
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background: #111111;
+        border: #fff solid 2px;
+        height: 12px;
+        width: 12px;
+    }
+</style>
+
+<body>
+    <form action="/echo" method="POST">
+        <h1>Unified Modeling Language Thory Test</h1>
+        <table border="0" cellspacing="20">
+            <tr>
+                <td>Test subject:</td>
+                <td>Unified Modeling Language</td>
+                <td>Time:</td>
+                <td>100minute</td>
+                <td>Score:</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Class:</td>
+                <td><select>
+                        <option>Class1</option>
+                        <option>Class2</option>
+                        <option>Class3</option>
+                    </select></td>
+                <td>Student ID:</td>
+                <td><input type="text" name="Student ID" value="001"></td>
+                <td>Name:</td>
+                <td><input type="text" name="Name" value="Darcy"></td>
+            </tr>
+        </table>
+        <h1>1、Fill in the Blanks(5 points per space,20 points total)</h1>
+        <ol>
+            <li>The full name of UML in Chinese is:<input type="text" name="UML" value="Unified Modeling Language"></li>
+            <li>The mostprominent feature of the object is:<input type="text" name="mostprominent1"
+                    value="Encapsulation"><input type="text" name="mostprominent2" value="Inheritance"><input
+                    type="text" name="mostprominent3" value="Polymorphism"></li>
+        </ol>
+        <h1>2、Multiple choice question(10 points per space,20 points total)</h1>
+
+        <ol>
+            <li>
+                <p>The relationship between UML and software engineering is:</p>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>
+                (A) UML is software engineering<br>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>(B) UML participates in serveral srages of software development
+                procedd in software engineering.<br>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>(C) UML has nothing to dowith software engineering<br>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>(D) UML is part of software engineering<br>
+            </li>
+            <li>
+                <p>Java Language support:</p>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>
+                (A) Single inheritance<br>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>(B) Multiple inheritance<br>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>(C) Single inheritance and multiple inheritance support<br>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                </label>(D) Single inheritance and multiple inheritance are not support<br>
+            </li>
+        </ol>
+        <h1>3、Multiple choice(10 points per space,20 points total)</h1>
+        <ol>
+            <li>
+                <p>The granularity of the use case is divided into the following three:</p>
+                <p><input type="checkbox" name="3_1_1">(A) Overview level</p>
+                <p><input type="checkbox" name="3_1_2">(B) Demand level</p>
+                <p><input type="checkbox" name="3_1_3">(C) User target level</p>
+                <p><input type="checkbox" name="3_1_4">(D) Sub-funtion level</p>
+            </li>
+            <li>
+                <p>The class diagram consists of which of the following three parts:</p>
+                <p><input type="checkbox" name="3_2_1">(A) Name</p>
+                <p><input type="checkbox" name="3_2_2">(B) Attibute</p>
+                <p><input type="checkbox" name="3_2_3">(C) Operation</p>
+                <p><input type="checkbox" name="3_2_4">(D) Function</p>
+            </li>
+        </ol>
+        <h1>4、True or False(10 points per space,20 points total)</h1>
+        <ol>
+            <li>Use case diagram are only used to communicate and communicate eith custimers to determine demand.<input
+                    type="radio" name="4_1" />√<input type="radio" name="4_1" />×</li>
+            <li>In the state diagram, the termination state allows any number of multiple in a state diagram.<input
+                    type="radio" name="4_2" />√<input type="radio" name="4_2" />×</li>
+        </ol>
+        <h1>5、Short answer question(20 points per space,20 points total)</h1>
+        <ol>
+            <li>Birefly describe what the model is and how it behaves?
+                <br>
+                <textarea rows="10" cols="80">
+
+                    </textarea>
+            </li>
+        </ol>
+
+
+
+        <p><button type="submit">Calulating score</button></p>
+
+    </form>
+</body>
+
+</html>
